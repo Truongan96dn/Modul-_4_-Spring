@@ -5,107 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04426e9a-276d-4597-9784-4949f78d0f8c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss12/controller/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss12/repository/IDictionaryRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss12/repository/impl/DictionaryRepoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss12/service/IDictionaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss12/service/impl/DictionaryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/translate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/HEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/description" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/applypatch-msg.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/commit-msg.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/fsmonitor-watchman.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/post-update.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/pre-applypatch.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/pre-commit.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/pre-merge-commit.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/pre-push.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/pre-rebase.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/pre-receive.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/prepare-commit-msg.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/push-to-checkout.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/hooks/update.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/info/exclude" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/07/0cb702f09eda497286745407381bcc5dfe94fc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/10/7acd32c4e687021ef32db511e8a206129b88ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/13/5639debf32db805c3345380c7fac0f31e14cae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/13/566b81b018ad684f3a35fee301741b2734c8f4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/14/2def25af216f4857576c4578f242f5d1c28d5c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/1b/6c787337ffb79f0e3cf8b1e9f00f680a959de1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/22/66f6bcf1aa24ee5b5d551474ac83a7e46cabeb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/24/9e5832f090a2944b7473328c07c9755baa3196" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/28/8b36b1efb71c411d5c27a1ea6c08e41a7fed46" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/31/4c097abf81b181a827cf2e6580d7d078dd8a78" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/39/be2b449914c1cb0bde06d71c3763e0309125b3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/3e/52c934f197b3da40ebc776e7fde2e73eedd84c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/42/64fd12cba2c509849d18cc7b974b6f8131ff89" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/4b/dcfcb8ddf83909b37899b4a6cd01cf0932ea69" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/57/2214926851cc0b21b8a9574a14cd27a4c104ab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/61/3051c9ecac097f35311af4b5931d8e23cdbf11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/65/47ad26153383be9a718c33fd674fb59e57e1c1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/65/b33867f536d34a139b6b6a22a321def5f343df" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/67/e71926d68a517faf26016594be7319ae9e268a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/7d/45053e5eeb01a917a6ef32ad84eab9018ce3e9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/81/00ae6a559f496d6cce8bf7b103be51b22974b1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/99/41fc5073abc9bc44775025a692246da177cee5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/99/dfd1521d6481c5af6414374c67bb7cd0a4ecca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/9b/c37fb2fc6796446917c60407fc247b30804c6d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/af/a4ee7a30dd2e091c32826510b6f1fe0f2011a4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/b6/3da4551b2e169d28b20728d5d53c6ca1779da4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/b7/e23531f1b73d7e529982ae38c4007fc4753cc4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/ba/1ec5c7e20c12eb5b893684698eab151c4a8803" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/c6/977edc13642ae3c56b1bc3f1fbb1617c1f29cb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/c9/f447b946ef496d22c7ca05d51e3875e9d76653" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/d1/16ece12d4ed3365ca1ca6a00225f6a2e0d77e0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/d8/0081d1318531b6c30eaf0d748bf80a0b2e042a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/dd/8887820e31ec92563117fe62fa356e21174748" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/dd/9651b6f68f7432e2e5e8f173f94c99b5f8e3c5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.git 14.47.25/objects/eb/7f66f2f4ab2e747d7196c3e74e7b1464e64114" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/controller/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/controller/Dictionary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/repository/CurrencyRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/repository/DictionaryRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/repository/ICurrencyRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/repository/IDictionaryRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/service/CurrencyService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/service/DictionaryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/service/ICurrencyService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/ss1/service/IDictionaryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/views/dictionary.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/views/transfer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/ss2-1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/ss2-1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/ss2-2/src/main/java/com/example/ss22/controller/Calculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/ss2-2/src/main/java/com/example/ss22/service/CalculatorServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/ss2-2/src/main/webapp/WEB-INF/views/calculator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/ss2-2/src/main/webapp/WEB-INF/views/calculator.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +69,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "fcda272a46ac29977f3a7bc81584cce5",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -229,6 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684477575776</updated>
       <workItem from="1684477578143" duration="1579000" />
+      <workItem from="1684483337959" duration="21000" />
     </task>
     <servers />
   </component>

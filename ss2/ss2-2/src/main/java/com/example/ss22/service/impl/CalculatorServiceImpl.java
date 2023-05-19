@@ -1,9 +1,10 @@
-package com.example.ss22.service;
+package com.example.ss22.service.impl;
 
+import com.example.ss22.service.ICalculatorService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CalculatorServiceImpl implements ICalculatorService{
+public class CalculatorServiceImpl implements ICalculatorService {
 
     @Override
     public float calculate(String type, float number1, float number2) {
