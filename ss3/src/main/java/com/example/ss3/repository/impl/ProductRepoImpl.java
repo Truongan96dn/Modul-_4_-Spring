@@ -1,67 +1,59 @@
-package com.example.ss3.repository;
+package com.example.ss3.repository.impl;
 
 import com.example.ss3.model.Product;
+import com.example.ss3.repository.BaseRepository;
+import com.example.ss3.repository.IProductRepo;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.Entity;
+import javax.persistence.EntityTransaction;
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class ProductRepoImpl implements IProductRepo{
-    private static List<Product> productList = new ArrayList<>();
-    static {
-        productList.add(new Product(1,"Iphone 11",500,"Black","Apple"));
-        productList.add(new Product(2,"Iphone 12",550,"White","Apple"));
-        productList.add(new Product(3,"Iphone 13",600,"Gray","Apple"));
-        productList.add(new Product(4,"Iphone 14",1000,"Cyan","Apple"));
-    }
+public class ProductRepoImpl implements IProductRepo {
     @Override
     public List<Product> getAll() {
-        return productList;
+        List<Product> products = BaseRepository.entityManager.createQuery("select p from Product p", Product.class).getResultList();
+        return products;
     }
 
     @Override
     public void createProduct(Product product) {
-      productList.add(product);
+        EntityTransaction transaction = BaseRepository.entityManager.getTransaction();
+        transaction.begin();
+        BaseRepository.entityManager.persist(product);
+        transaction.commit();
     }
 
     @Override
     public void delete(int id) {
-        for (int i = 0; i < productList.size(); i++) {
-            if(id == productList.get(i).getProductId()){
-                productList.remove(productList.get(i));
-            }
-        }
+        EntityTransaction transaction = BaseRepository.entityManager.getTransaction();
+        transaction.begin();
+        Product product = findById(id);
+        BaseRepository.entityManager.remove(product);
+        transaction.commit();
     }
 
     @Override
     public void update(Product product) {
-        for (int i = 0; i <productList.size() ; i++) {
-            if(product.getProductId()== productList.get(i).getProductId()){
-                productList.set(i,product);
-            }
-        }
+        EntityTransaction transaction = BaseRepository.entityManager.getTransaction();
+        transaction.begin();
+        BaseRepository.entityManager.merge(product);
+        transaction.commit();
     }
 
     @Override
     public Product findById(int id) {
-        for (int i = 0; i < productList.size(); i++) {
-            if ((id == productList.get(i).getProductId())){
-                return productList.get(i);
-            }
-        }
-        return null;
+        Product product= BaseRepository.entityManager.find(Product.class,id);
+        return product;
     }
 
     @Override
     public List<Product> findByName(String name) {
-        List<Product> products = new ArrayList<>();
-        for (int i = 0; i < productList.size(); i++) {
-            if(name.equals(productList.get(i).getProductName())){
-                products.add(productList.get(i));
-            }
-
-        }
+        List<Product> products = BaseRepository.entityManager.createQuery("select p from Product p where p.productName LIKE :name",Product.class)
+                .setParameter("name",'%'+name+'%')
+                .getResultList();
         return products;
     }
 }

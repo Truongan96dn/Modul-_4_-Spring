@@ -1,14 +1,15 @@
-package com.example.ss3.service;
+package com.example.ss3.service.impl;
 
 import com.example.ss3.model.Product;
 import com.example.ss3.repository.IProductRepo;
+import com.example.ss3.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
 
-public class ProductServiceImpl implements IProductService{
+public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductRepo iProductRepo;
     @Override
