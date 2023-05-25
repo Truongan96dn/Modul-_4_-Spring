@@ -1,1 +1,0 @@
-CREATE DATABASE module4_product;
