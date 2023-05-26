@@ -15,15 +15,45 @@ public class Blog {
     @NonNull
     private String title;
     @NonNull
-    @Column(name="content",columnDefinition = "LONGTEXT")
+    @Column(name = "content", columnDefinition = "LONGTEXT")
     private String content;
     @NonNull
     private String writer;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
+
+    public Blog(Integer id, @NonNull String title, @NonNull String content, @NonNull String writer, Category category) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.category = category;
+    }
+
+    public Blog(@NonNull String title, @NonNull String content, @NonNull String writer, Category category) {
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.category = category;
+    }
+
+    public Blog(Integer id, @NonNull String title, @NonNull String content, @NonNull String writer, Category category, @NonNull LocalDateTime dateCreate, LocalDateTime dateUpdate) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.category = category;
+        this.dateCreate = dateCreate;
+        this.dateUpdate = dateUpdate;
+    }
+
     @NonNull
-    @Column(name = "dateCreate",nullable = false,updatable = false,columnDefinition = "TIMESTAMP DEFAULT now()")
+    @Column(name = "dateCreate", nullable = false, updatable = false, columnDefinition = "TIMESTAMP DEFAULT now()")
     @CreationTimestamp
     private LocalDateTime dateCreate;
-    @Column(name="dateUpdate",nullable = false,columnDefinition = "TIMESTAMP DEFAULT now()")
+    @Column(name = "dateUpdate", nullable = false, columnDefinition = "TIMESTAMP DEFAULT now()")
     @UpdateTimestamp
     private LocalDateTime dateUpdate;
 
@@ -109,5 +139,13 @@ public class Blog {
 
     public void setDateCreate(@NonNull LocalDateTime dateCreate) {
         this.dateCreate = dateCreate;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

@@ -23,6 +23,15 @@
             <label> Writer</label>
             <input type="text"  th:field="*{writer}" class="form-control" style="width: 20vw;">
         </div>
+        <div>
+            <label> Category</label>
+            <select th:field="*{category}" class="form-control" style="width: 10vw">
+                <option th:each="category: ${categoryList}"
+                        th:text="${category.categoryName}"
+                        th:value="${category.categoryId}">
+                </option>
+            </select>
+        </div>
         <a>
             <button type="submit" class="btn btn-outline-success">Update</button>
         </a>
