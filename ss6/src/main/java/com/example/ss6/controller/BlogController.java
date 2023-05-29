@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +23,7 @@ public class BlogController {
     private ICategoryService iCategoryService;
     @GetMapping("/")
     public String display(Model model, @RequestParam(value = "page",defaultValue = "0") Integer page){
-        Pageable pageable = PageRequest.of(page,3);
+        Pageable pageable = PageRequest.of(page,3, Sort.by("dateCreate").descending());
         Page<Blog> list = iBlogService.getAll(pageable);
         model.addAttribute("blogList",list);
         return "home";
