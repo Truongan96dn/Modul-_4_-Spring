@@ -5,6 +5,9 @@ import com.example.ss6.model.Category;
 import com.example.ss6.service.IBlogService;
 import com.example.ss6.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +21,9 @@ public class BlogController {
     @Autowired
     private ICategoryService iCategoryService;
     @GetMapping("/")
-    public String display(Model model){
-        List<Blog> list = iBlogService.getAll();
+    public String display(Model model, @RequestParam(value = "page",defaultValue = "0") Integer page){
+        Pageable pageable = PageRequest.of(page,3);
+        Page<Blog> list = iBlogService.getAll(pageable);
         model.addAttribute("blogList",list);
         return "home";
     }
