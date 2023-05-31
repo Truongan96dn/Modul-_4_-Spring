@@ -10,18 +10,19 @@ import javax.validation.constraints.*;
 
 public class UserDTO implements Validator {
     private  Integer id;
-    @NotEmpty(message = "không được để trống")
+    @NotBlank(message = "không được để trống")
     @Size(min = 5,max = 45,message = "Tên tối thiểu 5 ký tự và tối đa 45 ký tự")
     private String firstName;
-    @NotEmpty(message = "không được để trống")
+    @NotBlank(message = "không được để trống")
     @Size(min = 5,max = 45,message = "Tên tối thiểu 5 ký tự và tối đa 45 ký tự")
     private String lastName;
-    @NotEmpty(message = "không được để trống")
+    @NotBlank(message = "không được để trống")
     private String phoneNumber;
     @Min(value = 18,message = "tối thiểu là 18 tuổi ")
+    @Max(value = 100,message = "Số tuổi không được quá 100")
     @NotNull(message = "không được để trống")
     private Integer age;
-    @NotEmpty(message = "không được để trống")
+    @NotBlank(message = "không được để trống")
     @Email(message = "không đúng định dạng email")
     private String email;
 
@@ -95,7 +96,7 @@ public class UserDTO implements Validator {
         UserDTO userDTO = (UserDTO) target;
         String regexPhone = "^0[1-9][0-9]{8}$";
         if(!userDTO.phoneNumber.matches(regexPhone)){
-            errors.rejectValue("phoneNumber","","số điện thoại không giống định dạng");
+            errors.rejectValue("phoneNumber","","số điện thoại không đúng định dạng");
         }
 
     }

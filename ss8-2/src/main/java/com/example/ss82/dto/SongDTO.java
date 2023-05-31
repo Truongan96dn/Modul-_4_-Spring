@@ -15,7 +15,7 @@ public class SongDTO {
     @NotEmpty(message = "Không được để trống")
     @Size(max = 300, message = "Vượt kích thước cho phép")
     @Pattern(regexp = "^[a-zA-Z0-9 ]+$", message = "Không được chứa các kí tự đặc biệt")
-    private String Singer;
+    private String singer;
     @NotEmpty(message = "Không được để trống")
     @Size(max = 1000, message = "Vượt kích thước cho phép")
     @Pattern(regexp = "^[a-zA-Z0-9 ]+$", message = "Không được chứa các kí tự đặc biệt")
@@ -26,14 +26,14 @@ public class SongDTO {
 
     public SongDTO(String songName, String singer, String songType) {
         this.songName = songName;
-        Singer = singer;
+        this.singer = singer;
         this.songType = songType;
     }
 
     public SongDTO(Integer id, String songName, String singer, String songType) {
         this.id = id;
         this.songName = songName;
-        Singer = singer;
+        this.singer = singer;
         this.songType = songType;
     }
 
@@ -54,11 +54,11 @@ public class SongDTO {
     }
 
     public String getSinger() {
-        return Singer;
+        return singer;
     }
 
     public void setSinger(String singer) {
-        Singer = singer;
+        this.singer = singer;
     }
 
     public String getSongType() {
