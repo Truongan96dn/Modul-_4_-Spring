@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/shop}">Home</a>
+        <a th:href="@{/shopping-cart}"><i style="width: 113px; font-size: xx-large ; color: darkslategray"
+                                          class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+</nav>
+<form th:action="@{/successfully}">
+    <table class="table">
+        <h1 style="text-align: center">Your Cart</h1>
+        <h3>Total Items: <span th:text="${cart.countItemQuantity()}"></span></h3>
+        <h3>Total Products: <span th:text="${cart.countProductQuantity()}"></span></h3>
+        <h3>Total Bill: <span th:text="${cart.countTotalPayment()}+'$'"></span></h3>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Image</th>
+            <th> Product Code</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="element, i : ${cart.products}">
+            <tr>
+                <td th:text="${i.index+1}"></td>
+                <td th:text="${element.getKey().name}"></td>
+                <td><img style="width: 20%" th:src="${element.getKey().img}" alt=""></td>
+                <td style="color: green" th:text="${element.getKey().productCode}"></td>
+                <td th:text="${element.getKey().price} +'$'"></td>
+                <td>
+                    <a th:href="@{/delete/__${element.getKey().id}__(action='show')}" class="btn btn-danger" th:text="${'-'}"></a>
+                    <span th:text="${element.getValue()}"></span>
+                    <a id="increase_button" th:href="@{/add/__${element.getKey().id}__(action='show')}"
+                       style="color: white;text-decoration: none" class="btn btn-primary" th:text="${'+'}"></a>
+                </td>
+                <td th:text="${element.getKey().price * element.getValue()}+'$'"></td>
+
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+    <div>
+        <button type="submit" class="btn btn-success">Pay</button>
+    </div>
+</form>
+
+
+<!--<p>-->
+<!--    <a href="/shop">Shop</a>-->
+<!--</p>-->
+
+<!--<h1>Your Cart</h1>-->
+
+<!--<form th:action="@{/shop}" th:object="${cart}" method="post">-->
+<!--    <h3>Total Items: <span th:text="${cart.countItemQuantity()}"></span></h3>-->
+<!--    <h3>Total Products: <span th:text="${cart.countProductQuantity()}"></span></h3>-->
+<!--    <table border="1">-->
+<!--        <tr>-->
+<!--            <th>Item</th>-->
+<!--            <th>Quantity</th>-->
+<!--            <th>Price</th>-->
+<!--        </tr>-->
+<!--       <tr th:each="product : ${cart.products}">-->
+
+<!--            <td th:text="${product.getKey().name}"></td>-->
+<!--            <td>-->
+<!--                <a id="decrease_button" th:text="${'-'}"></a>-->
+<!--                <span th:text="${product.getValue()}"></span>-->
+<!--                <a id="increase_button" th:href="@{/add/__${product.getKey().id}__(action='show')}"-->
+<!--                   th:text="${'+'}"></a>-->
+<!--            </td>-->
+<!--            <td th:text="${product.getKey().price}"></td>-->
+<!--       </tr>-->
+<!--        <tr>-->
+<!--            <td>Total</td>-->
+<!--            <td></td>-->
+<!--            <td th:text="${cart.countTotalPayment()}"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</form>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>
