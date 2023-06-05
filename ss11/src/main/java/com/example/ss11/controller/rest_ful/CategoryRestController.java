@@ -23,8 +23,5 @@ public class CategoryRestController {
     public ResponseEntity<List<Category>> getList(){
         return  new ResponseEntity<>(iCategoryService.getAll(), HttpStatus.OK);
     }
-    @GetMapping("/{name}")
-    public ResponseEntity<List<Blog>> getBlogByName(@PathVariable("name") String name){
-        return  new ResponseEntity<>(iCategoryService.findBlogByName(name), HttpStatus.OK);
-    }
+
 }
