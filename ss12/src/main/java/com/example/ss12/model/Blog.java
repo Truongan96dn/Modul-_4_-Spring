@@ -3,6 +3,7 @@ package com.example.ss12.model;
 import com.sun.istack.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -12,10 +13,12 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NonNull
     private String title;
+    @NonNull
     @Column(name = "content", columnDefinition = "text")
     private String content;
-    @NotNull
+    @NonNull
     private String writer;
     @Column(name = "dateCreate", nullable = false, updatable = false, columnDefinition = "TIMESTAMP DEFAULT now()")
     @CreationTimestamp

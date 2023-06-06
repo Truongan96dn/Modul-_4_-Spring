@@ -17,23 +17,7 @@ public class CategoryController {
     @Autowired
     private ICategoryService categoryService;
 
-    @GetMapping("/")
-    public String displayCategory(Model model) {
-        model.addAttribute("categoryList", categoryService.findAll());
-        return "/category_manager";
-    }
 
-    @GetMapping("/delete")
-    public String delete(@RequestParam("id") Long id) {
-        categoryService.deleteCategory(id);
-        return "redirect:/category/";
-    }
-
-    @GetMapping("/create")
-    public String create(Model model) {
-        model.addAttribute("category", new Category());
-        return "/create_category";
-    }
 
     @PostMapping("/save")
     public String save(@ModelAttribute("category") Category category) {
@@ -41,11 +25,6 @@ public class CategoryController {
         return "redirect:/category/";
     }
 
-    @GetMapping("/update/{categoryId}")
-    public String updateInfo(@PathVariable("categoryId") Long categoryId, Model model) {
-        model.addAttribute("category", categoryService.findById(categoryId));
-        return "update_category";
-    }
     @PostMapping("/update")
     public String update(@ModelAttribute("category") Category category) {
         categoryService.saveCategory(category);

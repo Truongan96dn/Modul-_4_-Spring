@@ -19,18 +19,16 @@ import org.springframework.web.bind.annotation.*;
 public class BlogRestController {
     @Autowired
     private IBlogService blogService;
-    @Autowired
-    private ICategoryService categoryService;
 
     @GetMapping("")
     public ResponseEntity<Slice<Blog>> showList(@RequestParam(value = "page",defaultValue = "0") Integer page){
-        Pageable pageable = PageRequest.of(page,5, Sort.by("id"));
+        Pageable pageable = PageRequest.of(page,3, Sort.by("id"));
         Slice<Blog> blogSlice = blogService.findAll(pageable);
         return new ResponseEntity<>(blogSlice, HttpStatus.OK);
     }
 
     @GetMapping("/search")
-    public ResponseEntity<Slice<Blog>> search(@RequestParam("title") String title,  Model model) {
+    public ResponseEntity<Slice<Blog>> search(@RequestParam("title") String title) {
         Slice<Blog> blogSlice = blogService.searchBlogSlice(title);
         return new ResponseEntity<>(blogSlice, HttpStatus.OK);
     }
