@@ -1,7 +1,8 @@
-package com.example.ss12.service;
+package com.example.ss12.service.impl;
 
 import com.example.ss12.model.Blog;
 import com.example.ss12.repository.IBlogRepo;
+import com.example.ss12.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-public class BlogService implements IBlogService{
+public class BlogServiceImpl implements IBlogService {
     @Autowired
     private IBlogRepo blogRepository;
 
