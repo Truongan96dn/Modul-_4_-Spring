@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -51,12 +51,12 @@
 
 <div class="row mt-5 container-fluid">
     <div class="col-8">
-        <div class="row">
+        <div class="row" sec:authorize="hasAuthority('ROLE_ADMIN')">
             <div class="col-11">
                 <input class="form-control form-control-sm" type="text" placeholder="Title"
                        aria-label=".form-control-sm example" id="titleSearch" name="title" th:value="${title}">
             </div>
-            <div class="col-1">
+            <div class="col-1" >
                 <button id="search" onclick="searchName()" class="btn btn-sm btn-warning">Search</button>
             </div>
         </div>
